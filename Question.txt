@@ -1,7 +1,7 @@
 Task3: Product Web Portal
 
  - create a login & signup component for user. 
- - after successful login user should navigate to dashboard
+ - after successful login user should navigate to dashboard ---------done-------
  - dashboard will be consists of header with search bar below that filter tab which will have options like price, rating, delivery days etc. & below that one container which will contains all products in card format
  - for product data required properties are name, description, price, rating, review, delivery days, seller etc.
  - Whenever user clicks on product card a detailed view of product should open with all product details

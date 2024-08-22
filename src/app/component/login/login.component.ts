@@ -20,17 +20,21 @@ export class LoginComponent {
 
   submit() {
     if (this.form.valid) {
-      console.log(this.form.value);
-
       // getting all user login credentials
       this.httpService.getLogin().subscribe({
         next: (res:any) => {
-
+          let loginSuccess = false;
           // iterating over all user's login credentials to validate the input credential
           for(let item of res){
+            //for valid login cred
             if(item.username == this.form.value.username && item.password == this.form.value.password) {
-              this.router.navigate(['./dashboard']);
+              loginSuccess = true;
+              this.router.navigate(['./dashboard']);  
             }
+          }
+          // for invalid login cred
+          if( !loginSuccess ){
+            alert('invalid username or password');
           }
         }
       })
