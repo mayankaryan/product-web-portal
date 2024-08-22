@@ -11,7 +11,7 @@
             <mat-icon >search</mat-icon>
         </div>
         <div>
-            <input id="searchNote" type="text" placeholder="Search">
+            <input id="searchNote" type="text" placeholder="Search" [(ngModel)]="searchQuery" (keyup)="searchProduct()">
         </div>
     </div>
    

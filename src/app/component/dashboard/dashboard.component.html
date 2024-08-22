@@ -12,10 +12,12 @@
     </div>
 
     <div class="product-cnt"  >
-        <mat-card class="product-card" appearence="outlined" *ngFor="let item of productList">
+        <mat-card class="product-card" appearence="outlined" *ngFor="let item of productList | search : searchQuery">
             <mat-card-header>
                 <mat-card-title class="product-title">{{ item.name }} </mat-card-title>
+
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                
                 <mat-icon >favorite_outline</mat-icon>
             </mat-card-header>
             <img mat-card-image src="{{ item.img_url }}">

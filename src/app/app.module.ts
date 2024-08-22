@@ -8,6 +8,7 @@ import { MaterialModule } from './module/material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HeaderComponent } from './component/header/header.component';
+import { SearchPipe } from './pipe/search.pipe';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { HeaderComponent } from './component/header/header.component';
     LoginComponent,
     DashboardComponent,
     HeaderComponent,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
