@@ -27,23 +27,27 @@
     margin: 1em;
     padding: 1em;
 }
+.product-card img {
+    background-size: cover;
+    height: 200px;
+    width: 290px;
+
+}
 
 .product-title {
-    font-size: 30px;
-    margin-bottom: 1em;
+    font-size: 20px;
+    margin-bottom: 0.5em;
+    margin-top: 0;
 }
 
 .product-dtl {
-    font-size: 18px;
-    margin: 0.4em 0;
+    font-size: 16px;
+    margin: 0.3em 0;
 }
 
-.review-cnt {
-    // border: 1px solid black;
-    padding: 1em;
+.details {
+    padding: 0 1em;
     border-radius: 0 1em 1em 1em;
-    height: 7em;
-    overflow: hidden;
     box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3);
 }
 .review-cnt p {

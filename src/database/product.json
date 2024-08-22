@@ -2,83 +2,92 @@
     "Product": [
         {
             "id": 1,
-            "name" : "Hitachi",
+            "name" : "Splender Arrow",
             "description": "all weather AC",
             "rating" : 4,
             "price": 180,
             "delivery_days":    3,
+            "img_url" : "../../../assets/splender arrow.jpg",
             "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
         },
         {   
             "id": 2,
-            "name" : "LG",
+            "name" : "Rever Vandal",
             "description": "all weather AC",
             "rating" : 3,
             "price": 190,
             "delivery_days":    3,
+            "img_url" : "../../../assets/rever vandal.jpg",
             "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
         },
         {
             "id": 3,
-            "name" : "Samsung",
+            "name" : "Blood Reaper",
             "description": "all weather AC",
             "rating" : 4,
             "price": 200,
+            "img_url" : "../../../assets/blood reaper.jpg",
             "delivery_days":    3,
             "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
         },
         {
             "id": 4,
-            "name" : "Panasonic",
+            "name" : "Rever Knife",
             "description": "all weather AC",
             "rating" : 3,
             "price": 210,
             "delivery_days":    3,
+            "img_url" : "../../../assets/rever knife.jpg",
             "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
         },
         {
             "id": 5,
-            "name" : "Panasonic PN01",
+            "name" : "Elder Flame",
             "description": "all weather AC",
             "rating" : 5,
             "price": 200,
             "delivery_days":    3,
+            "img_url" : "../../../assets/elderflame.jpg",
             "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
         },
         {
             "id": 6,
-            "name" : "Hitachi HC56",
+            "name" : "Red Horn",
             "description": "all weather AC",
             "rating" : 5,
             "price": 220,
             "delivery_days":    3,
+            "img_url" : "../../../assets/redhorn stonethresher.jpg",
             "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
         },
         {
             "id": 7,
-            "name" : "Google",
+            "name" : "Elder Flame",
             "description": "all weather AC",
             "rating" : 2,
             "price": 150,
             "delivery_days":    3,
+            "img_url" : "../../../assets/elderflame.jpg",
             "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
         },
         {
             "id": 8,
-            "name" : "Apple M14",
+            "name" : "Splender Arrow",
             "description": "all weather AC",
             "rating" : 3,
             "price": 220,
             "delivery_days":    3,
+            "img_url" : "../../../assets/splender arrow.jpg",
             "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
         },
         {
             "id": 9,
-            "name" : "Samsung S50",
+            "name" : "Rever Knife",
             "description": "all weather AC",
             "rating" : 2,
             "price": 140,
             "delivery_days":    3,
+            "img_url" : "../../../assets/rever knife.jpg",
             "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
         }
     ]
