@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { HttpService } from 'src/app/service/http/http.service';
 
 @Component({
   selector: 'app-login',
@@ -11,14 +12,22 @@ export class LoginComponent {
     username: new FormControl(''),
     password: new FormControl(''),
   });
+  loginCredential: any ;
+
+  constructor ( private httpService: HttpService) {}
+
+  
 
   submit() {
     if (this.form.valid) {
       console.log(this.form.value);
-      this.submitEM.emit(this.form.value);
+      this.httpService.getLogin().subscribe({
+        next: (res:any) => {
+          console.log(res);
+          this.loginCredential = res;
+        }
+      })
     }
   }
-  // @Input() error: string | null;
 
-  @Output() submitEM = new EventEmitter();
 }

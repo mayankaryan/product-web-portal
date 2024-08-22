@@ -6,29 +6,23 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './component/login/login.component';
 import { MaterialModule } from './module/material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CommonModule } from '@angular/common';
-import {MatCardModule} from '@angular/material/card';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {FormsModule} from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { HeaderComponent } from './component/header/header.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    DashboardComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
     BrowserAnimationsModule,
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatCardModule,
-    MatInputModule,
-    MatButtonModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
