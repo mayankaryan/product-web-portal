@@ -39,16 +39,15 @@
                 
                 <select matNativeControl [(ngModel)]="selectedDelivery" (change)="filterFunction()">
                     <option value=""></option>
-                    <option value="latest">latest</option>
-                    <option value="within_3">within 3 days</option>
-                    <option value="within_5">within 5 days</option>
+                    <option value="latestOrder">latest order</option>
+                    <option value="deliverySoon">delivered soon</option>
                 </select>
             </mat-form-field>
         </button>
     </div>
 
     <div class="product-cnt">
-        <mat-card class="product-card" appearence="outlined" *ngFor="let item of productList | search : searchQuery">
+        <mat-card class="product-card" appearence="outlined" *ngFor="let item of productList | search : searchQuery | filter : selectedPrice : selectedRating : selectedDelivery">
             <mat-card-header>
                 <mat-card-title class="product-title">{{ item.name }} </mat-card-title>
 
@@ -64,8 +63,10 @@
                             }}</span></mat-card-subtitle>
                     <mat-card-subtitle class="product-dtl">Rating: <span>{{ item.rating }}</span></mat-card-subtitle>
                     <mat-card-subtitle class="product-dtl">{{ item.description }}</mat-card-subtitle>
-                    <mat-card-subtitle class="product-dtl">Delivery Days: <span>{{ item.delivery_days
-                            }}</span></mat-card-subtitle>
+                    <mat-card-subtitle class="product-dtl">
+                        <p *ngIf="item.delivery_days!==1">Delivery within {{ item.delivery_days }} days</p>
+                        <p *ngIf="item.delivery_days==1">Delivery today..</p>
+                        </mat-card-subtitle>
                 </mat-card-content>
             </div>
         </mat-card>

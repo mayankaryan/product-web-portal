@@ -8,7 +8,8 @@ import { MaterialModule } from './module/material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HeaderComponent } from './component/header/header.component';
-import { SearchPipe } from './pipe/search.pipe';
+import { SearchPipe } from './pipe/search/search.pipe';
+import { FilterPipe } from './pipe/filter/filter.pipe';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { SearchPipe } from './pipe/search.pipe';
     DashboardComponent,
     HeaderComponent,
     SearchPipe,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
