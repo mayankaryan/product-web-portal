@@ -3,30 +3,69 @@
 <div class="main-cnt">
 
     <div class="filter-cnt">
-        <mat-icon>filter_list</mat-icon>
-        <mat-button-toggle-group multiple >
-            <mat-button-toggle value="Price">Price</mat-button-toggle>
-            <mat-button-toggle value="Rating">Rating</mat-button-toggle>
-            <mat-button-toggle value="Delivery Days">Delivery Days</mat-button-toggle>
-        </mat-button-toggle-group>   
+
+        <button mat-button>
+            <mat-form-field>
+                <mat-label class="inc-font">Price
+                    <mat-icon>filter_list</mat-icon>
+                </mat-label>
+
+                <select matNativeControl [(ngModel)]="selectedPrice" (change)="filterFunction()">
+                    <option value=""></option>
+                    <option value="lowTohigh">low to high</option>
+                    <option value="highTolow">high to low</option>
+                </select>
+            </mat-form-field>
+        </button>
+
+        <button mat-button>
+            <mat-form-field>
+                <mat-label class="inc-font">Rating 
+                    <mat-icon >filter_list</mat-icon>
+                </mat-label>
+                <select matNativeControl [(ngModel)]="selectedRating" (change)="filterFunction()">
+                    <option value=""></option>
+                    <option value="lowTohigh">low to high</option>
+                    <option value="highTolow">high to low</option>
+                </select>
+            </mat-form-field>
+        </button>
+
+        <button mat-button>
+            <mat-form-field>
+                <mat-label class="inc-font">Delivery
+                    <mat-icon>filter_list</mat-icon>
+                </mat-label>
+                
+                <select matNativeControl [(ngModel)]="selectedDelivery" (change)="filterFunction()">
+                    <option value=""></option>
+                    <option value="latest">latest</option>
+                    <option value="within_3">within 3 days</option>
+                    <option value="within_5">within 5 days</option>
+                </select>
+            </mat-form-field>
+        </button>
     </div>
 
-    <div class="product-cnt"  >
+    <div class="product-cnt">
         <mat-card class="product-card" appearence="outlined" *ngFor="let item of productList | search : searchQuery">
             <mat-card-header>
                 <mat-card-title class="product-title">{{ item.name }} </mat-card-title>
 
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                
-                <mat-icon >favorite_outline</mat-icon>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </p>
+
+                <mat-icon>favorite_outline</mat-icon>
             </mat-card-header>
             <img mat-card-image src="{{ item.img_url }}">
             <div class="details">
                 <mat-card-content>
-                    <mat-card-subtitle class="product-dtl">Price: <span>{{ item.price | currency: 'INR' }}</span></mat-card-subtitle>
+                    <mat-card-subtitle class="product-dtl">Price: <span>{{ item.price | currency: 'INR'
+                            }}</span></mat-card-subtitle>
                     <mat-card-subtitle class="product-dtl">Rating: <span>{{ item.rating }}</span></mat-card-subtitle>
                     <mat-card-subtitle class="product-dtl">{{ item.description }}</mat-card-subtitle>
-                    <mat-card-subtitle class="product-dtl">Delivery Days: <span>{{ item.delivery_days }}</span></mat-card-subtitle>
+                    <mat-card-subtitle class="product-dtl">Delivery Days: <span>{{ item.delivery_days
+                            }}</span></mat-card-subtitle>
                 </mat-card-content>
             </div>
         </mat-card>

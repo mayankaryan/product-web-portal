@@ -8,12 +8,22 @@
 .filter-cnt {
     // border: 1px solid black;
     margin: 1em;
-    display: flexbox;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.1); 
+    display: flex;
 }
-
+.filter-cnt button {
+    // border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2%;
+    border-radius: .5em;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.4); 
+}
+.inc-font {
+    font-size: 20px;
+}
 .product-cnt {
     // border: 1px solid black;
     margin: auto;

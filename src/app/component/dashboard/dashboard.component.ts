@@ -10,6 +10,9 @@ import { SearchService } from 'src/app/service/user/search.service';
 export class DashboardComponent implements OnInit {
   productList !: any;
   searchQuery : string = "";
+  selectedPrice: string = "";
+  selectedRating: string = "";
+  selectedDelivery: string = "";
 
   constructor( private httpService: HttpService, private searchService: SearchService) {}
 
@@ -27,5 +30,9 @@ export class DashboardComponent implements OnInit {
         this.searchQuery = res;
       }
     })
+  }
+
+  filterFunction() {
+    console.log(this.selectedPrice  + '\n' + this.selectedRating + '\n' + this.selectedDelivery);
   }
 }

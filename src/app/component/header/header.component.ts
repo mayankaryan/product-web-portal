@@ -12,6 +12,7 @@ export class HeaderComponent {
 
   constructor(private searchService: SearchService) {}
 
+  //----- Sending the input of search bar to Search Service, which is then transferred to dashboard component
   searchProduct() {
     this.searchService.sendSearchQuery(this.searchQuery);
   }
