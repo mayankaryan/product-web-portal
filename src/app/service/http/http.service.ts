@@ -11,4 +11,8 @@ export class HttpService {
   getLogin() : any {
     return this.httpClient.get('http://localhost:3000/login');
   }
+
+  getProductDetails(): any {
+    return this.httpClient.get('http://localhost:3000/Product');
+  }
 }

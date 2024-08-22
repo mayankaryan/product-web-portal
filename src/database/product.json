@@ -1,0 +1,85 @@
+{
+    "Product": [
+        {
+            "id": 1,
+            "name" : "Hitachi",
+            "description": "all weather AC",
+            "rating" : 4,
+            "price": 180,
+            "delivery_days":    3,
+            "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
+        },
+        {   
+            "id": 2,
+            "name" : "LG",
+            "description": "all weather AC",
+            "rating" : 3,
+            "price": 190,
+            "delivery_days":    3,
+            "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
+        },
+        {
+            "id": 3,
+            "name" : "Samsung",
+            "description": "all weather AC",
+            "rating" : 4,
+            "price": 200,
+            "delivery_days":    3,
+            "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
+        },
+        {
+            "id": 4,
+            "name" : "Panasonic",
+            "description": "all weather AC",
+            "rating" : 3,
+            "price": 210,
+            "delivery_days":    3,
+            "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
+        },
+        {
+            "id": 5,
+            "name" : "Panasonic PN01",
+            "description": "all weather AC",
+            "rating" : 5,
+            "price": 200,
+            "delivery_days":    3,
+            "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
+        },
+        {
+            "id": 6,
+            "name" : "Hitachi HC56",
+            "description": "all weather AC",
+            "rating" : 5,
+            "price": 220,
+            "delivery_days":    3,
+            "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
+        },
+        {
+            "id": 7,
+            "name" : "Google",
+            "description": "all weather AC",
+            "rating" : 2,
+            "price": 150,
+            "delivery_days":    3,
+            "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
+        },
+        {
+            "id": 8,
+            "name" : "Apple M14",
+            "description": "all weather AC",
+            "rating" : 3,
+            "price": 220,
+            "delivery_days":    3,
+            "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
+        },
+        {
+            "id": 9,
+            "name" : "Samsung S50",
+            "description": "all weather AC",
+            "rating" : 2,
+            "price": 140,
+            "delivery_days":    3,
+            "reviews" : ["it is very good product","this is the best product","the product is better than the previous one"]
+        }
+    ]
+}

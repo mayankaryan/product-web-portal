@@ -8,6 +8,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 
 
 @NgModule({
@@ -22,6 +25,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     HttpClientModule,
     MatIconModule,
     MatToolbarModule,
+    MatButtonToggleModule,
+    MatCheckboxModule,
   ]
 })
 export class MaterialModule { }
