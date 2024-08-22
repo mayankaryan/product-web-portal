@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
@@ -14,6 +14,7 @@ export class LoginComponent {
 
   submit() {
     if (this.form.valid) {
+      console.log(this.form.value);
       this.submitEM.emit(this.form.value);
     }
   }
