@@ -10,6 +10,7 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HeaderComponent } from './component/header/header.component';
 import { SearchPipe } from './pipe/search/search.pipe';
 import { FilterPipe } from './pipe/filter/filter.pipe';
+import { ProductComponent } from './component/product/product/product.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { FilterPipe } from './pipe/filter/filter.pipe';
     HeaderComponent,
     SearchPipe,
     FilterPipe,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,

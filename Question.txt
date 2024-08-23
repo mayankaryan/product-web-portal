@@ -11,12 +11,12 @@ Task3: Product Web Portal
  - Whenever user clicks on product card a detailed view of product should open with all product details
 
  - Whenever a user selects any filter from the filter tab, that time product list needs to update according to 
-    filter & it should reflect in the UI. This change needs to do in UI only
+    filter & it should reflect in the UI. This change needs to do in UI only                                           ------done
 
  - In product details view components one input field needs to add to add review. When user clicks on submit new 
     review should get added for that book by calling api & changes need to reflect in UI as well
     
- - In header component search bar whatever query user will enter based on that data need to be filter in UI
+ - In header component search bar whatever query user will enter based on that data need to be filter in UI            -----done
  
  
 Data required

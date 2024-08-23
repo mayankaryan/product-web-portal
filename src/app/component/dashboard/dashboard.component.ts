@@ -31,9 +31,9 @@ export class DashboardComponent implements OnInit {
       }
     })
   }
-
   filterFunction() {
     console.log(this.selectedPrice  + '\n' + this.selectedRating + '\n' + this.selectedDelivery);
     
   }
 }
+
