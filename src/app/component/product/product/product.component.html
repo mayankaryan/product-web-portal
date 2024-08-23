@@ -1,12 +1,22 @@
 <div class="main-cnt">
     <h1 mat-dialog-title>{{ data.name }}</h1>
-    <div mat-dialog-content>
+    <div mat-dialog-content class="details-cnt">
         <img [src]="data.img_url" alt="{{ data.name }}">
         <p>Price: {{ data.price | currency: 'INR' }}</p>
         <p>Rating: {{ data.rating }}</p>
         <p>{{ data.description }}</p>
         <p *ngIf="data.delivery_days !== 1">Delivery within {{ data.delivery_days }} days</p>
         <p *ngIf="data.delivery_days === 1">Delivery today..</p>
+    </div>
+    <div class="review-cnt">
+        <span><b>Reviews: </b></span>
+        <div *ngFor="let review of data.reviews">
+            <span>{{review}}</span>
+        </div>
+        <div class="add-review">
+            <input type="text" placeholder="review..." [(ngModel)]="review" >
+            <button mat-button (click)="addReview(data.id)">add</button>
+        </div>
     </div>
     <div mat-dialog-actions>
         <button mat-button (click)="onClose()">Close</button>

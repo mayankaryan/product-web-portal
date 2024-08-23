@@ -2,3 +2,21 @@
     max-width: 70%;
     max-height:400px ;
 }
+
+.details.cnt p{
+    margin: 0;
+}
+
+.review-cnt {
+    margin: 0 2em;
+}
+
+.add-review {
+    box-shadow: 4px 4px 8px 0px gray;
+}
+.add-review input {
+    height: 20px;
+    border: none;
+    outline: none;
+    width: 80%;
+}
