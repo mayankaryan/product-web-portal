@@ -20,8 +20,8 @@
 
         <button mat-button>
             <mat-form-field>
-                <mat-label class="inc-font">Rating 
-                    <mat-icon >filter_list</mat-icon>
+                <mat-label class="inc-font">Rating
+                    <mat-icon>filter_list</mat-icon>
                 </mat-label>
                 <select matNativeControl [(ngModel)]="selectedRating" (change)="filterFunction()">
                     <option value=""></option>
@@ -36,7 +36,7 @@
                 <mat-label class="inc-font">Delivery
                     <mat-icon>filter_list</mat-icon>
                 </mat-label>
-                
+
                 <select matNativeControl [(ngModel)]="selectedDelivery" (change)="filterFunction()">
                     <option value=""></option>
                     <option value="latestOrder">latest order</option>
@@ -47,15 +47,17 @@
     </div>
 
     <div class="product-cnt">
-        <mat-card class="product-card" appearence="outlined" *ngFor="let item of productList | search : searchQuery | filter : selectedPrice : selectedRating : selectedDelivery">
+        <mat-card class="product-card" appearance="outlined"
+            *ngFor="let item of productList | search : searchQuery | filter : selectedPrice : selectedRating : selectedDelivery">
             <mat-card-header>
                 <div class="card-header">
-                    
-                    <mat-card-title class="product-title">{{ item.name }} </mat-card-title>    
+                    <button mat-button (click)="openDialog(item)">
+                        <mat-card-title class="product-title">{{ item.name }}</mat-card-title>
+                    </button>
                     <mat-icon>favorite_outline</mat-icon>
                 </div>
             </mat-card-header>
-            <img mat-card-image src="{{ item.img_url }}">
+            <img mat-card-image [src]="item.img_url">
             <div class="details">
                 <mat-card-content>
                     <mat-card-subtitle class="product-dtl">Price: <span>{{ item.price | currency: 'INR'
@@ -63,13 +65,14 @@
                     <mat-card-subtitle class="product-dtl">Rating: <span>{{ item.rating }}</span></mat-card-subtitle>
                     <mat-card-subtitle class="product-dtl">{{ item.description }}</mat-card-subtitle>
                     <mat-card-subtitle class="product-dtl">
-                        <p *ngIf="item.delivery_days!==1">Delivery within {{ item.delivery_days }} days</p>
-                        <p *ngIf="item.delivery_days==1">Delivery today..</p>
-                        </mat-card-subtitle>
+                        <p *ngIf="item.delivery_days !== 1">Delivery within {{ item.delivery_days }} days</p>
+                        <p *ngIf="item.delivery_days === 1">Delivery today..</p>
+                    </mat-card-subtitle>
                 </mat-card-content>
             </div>
         </mat-card>
     </div>
+
 
 
 </div>

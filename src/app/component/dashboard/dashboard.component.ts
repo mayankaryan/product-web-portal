@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from 'src/app/service/http/http.service';
 import { SearchService } from 'src/app/service/user/search.service';
+import { ProductComponent } from '../product/product/product.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,7 +16,7 @@ export class DashboardComponent implements OnInit {
   selectedRating: string = "";
   selectedDelivery: string = "";
 
-  constructor( private httpService: HttpService, private searchService: SearchService) {}
+  constructor( private httpService: HttpService, private searchService: SearchService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     //-------- getting the product details from json server
@@ -33,7 +35,13 @@ export class DashboardComponent implements OnInit {
   }
   filterFunction() {
     console.log(this.selectedPrice  + '\n' + this.selectedRating + '\n' + this.selectedDelivery);
-    
+  }
+
+  openDialog(item: any): void {
+    this.dialog.open(ProductComponent, {
+      // width: '60%',
+      data: item
+    });
   }
 }
 
