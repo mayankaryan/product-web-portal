@@ -11,6 +11,7 @@ import { HeaderComponent } from './component/header/header.component';
 import { SearchPipe } from './pipe/search/search.pipe';
 import { FilterPipe } from './pipe/filter/filter.pipe';
 import { ProductComponent } from './component/product/product/product.component';
+import { SigninComponent } from './component/signin/signin/signin.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ProductComponent } from './component/product/product/product.component'
     SearchPipe,
     FilterPipe,
     ProductComponent,
+    SigninComponent,
   ],
   imports: [
     BrowserModule,

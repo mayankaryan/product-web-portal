@@ -1,0 +1,23 @@
+<mat-card class="cnt-width">
+    <mat-card-title>Sign in</mat-card-title>
+<mat-card-content >
+<form style="width: 100%;"  [formGroup]="form" (ngSubmit)="submit()">
+    <mat-form-field style="width: 100%;">
+      <input type="text" matInput placeholder="Username" formControlName="username">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+        <input type="text" matInput placeholder="email" formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+      <input type="password" matInput placeholder="Password" formControlName="password">
+    </mat-form-field>
+
+  <div class="button">
+    <button type="submit" mat-button>sign in</button>
+  </div>
+
+</form>
+</mat-card-content>
+</mat-card>
