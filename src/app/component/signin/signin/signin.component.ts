@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { HttpService } from 'src/app/service/http/http.service';
 import { Router } from '@angular/router';
-import { idText } from 'typescript';
 
 @Component({
   selector: 'app-signin',
