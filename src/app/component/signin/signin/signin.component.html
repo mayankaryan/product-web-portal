@@ -4,14 +4,26 @@
 <form style="width: 100%;"  [formGroup]="form" (ngSubmit)="submit()">
     <mat-form-field style="width: 100%;">
       <input type="text" matInput placeholder="Username" formControlName="username">
+      <div class="text-danger" *ngIf="form.controls['username'].touched">
+        <span class="ng-validators" *ngIf="form.controls['username'].hasError('required')">username is required</span>
+        <span class="ng-validators" *ngIf="form.controls['username'].hasError('minlength')">required min. 4 characters</span>
+      </div>
     </mat-form-field>
 
     <mat-form-field style="width: 100%;">
         <input type="text" matInput placeholder="email" formControlName="email">
+        <div class="text-danger" *ngIf="form.controls['email'].touched">
+          <span class="ng-validators" *ngIf="form.controls['email'].hasError('required')">email is required</span>
+          <span class="ng-validators" *ngIf="form.controls['email'].hasError('email')">invaid email</span>
+        </div>
     </mat-form-field>
 
     <mat-form-field style="width: 100%;">
       <input type="password" matInput placeholder="Password" formControlName="password">
+      <div class="text-danger" *ngIf="form.controls['password'].touched">
+        <span class="ng-validators" *ngIf="form.controls['password'].hasError('required')">password is required</span>
+        <span class="ng-validators" *ngIf="form.controls['password'].hasError('minlength')">required min. 6 characters</span>
+      </div>
     </mat-form-field>
 
   <div class="button">

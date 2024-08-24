@@ -26,13 +26,6 @@
     justify-content: center;
   }
 
-  .error {
-    padding: 16px;
-    width: 300px;
-    color: white;
-    background-color: red;
-  }
-
   .button button {
     display: flex;
     justify-content: center;
@@ -40,4 +33,9 @@
     // border: 1px solid black;
     border-radius: 5px;
     background: rgb(129, 188, 244);
+  }
+
+  .ng-validators {
+    color: red;
+    margin-top: 0;
   }

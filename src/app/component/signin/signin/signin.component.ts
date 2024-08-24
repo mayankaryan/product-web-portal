@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpService } from 'src/app/service/http/http.service';
 import { Router } from '@angular/router';
 
@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
 })
 export class SigninComponent {
   form: FormGroup = new FormGroup({
-    username: new FormControl(''),
-    email: new FormControl(''),
-    password: new FormControl(''),
+    username: new FormControl('',[ Validators.minLength(4), Validators.required ]),
+    email: new FormControl('', [ Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.minLength(6),Validators.required]),
   });
 
   constructor(private httpService: HttpService, private router: Router) { }
