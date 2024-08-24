@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { error } from 'winston';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +9,14 @@ export class HttpService {
 
   constructor( private httpClient: HttpClient ) { }
 
-  postSignin(body: any) {
-    this.httpClient.post('http://localhost:3000/login', body);
+  postSignin(body: any) : any {
+    return this.httpClient.post('http://localhost:3000/login', 
+      {
+        "username": body.username,
+        "email": body.email,
+        "password": body.password
+      } 
+    );
   }
 
   getLogin() : any {

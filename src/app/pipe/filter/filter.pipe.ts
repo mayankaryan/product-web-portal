@@ -5,12 +5,17 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
+
+  /** 
+   * @param: value, price, rating, delivery
+   * @returns: value 
+   */
   transform(value: any, price: string, rating: string, delivery: string): any {
     // console.log('pipe' + price);
     if( !price && !rating && !delivery) return value;
 
-    //------- filter login based on Price
-    if(price === 'highTolow'){
+   
+    if(price === 'highTolow'){                       //------- filter login based on Price
       value.sort((prod1: any, prod2: any) => {
         return prod2.price - prod1.price;
       })
@@ -21,8 +26,7 @@ export class FilterPipe implements PipeTransform {
       })
     }
 
-    //------- filter login based on Rating
-    if(rating == 'highTolow') {
+    if(rating == 'highTolow') {                    //------- filter login based on Rating
       value.sort((prod1: any, prod2: any) => {
         return prod2.rating - prod1.rating;
       })
@@ -33,8 +37,8 @@ export class FilterPipe implements PipeTransform {
       })
     }
 
-    //------- filter login based on Delivery day
-    if(delivery == 'latestOrder') {
+    
+    if(delivery == 'latestOrder') {              //------- filter login based on Delivery day
       value.sort((prod1: any, prod2: any) => {
         return prod2.delivery_days - prod1.delivery_days;
       })

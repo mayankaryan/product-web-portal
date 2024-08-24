@@ -4,6 +4,30 @@
       "id": "1",
       "username": "mayank",
       "password": "may123"
+    },
+    {
+      "id": "5999",
+      "username": "mayank",
+      "email": "mayank@gmail.com",
+      "password": "mayank@123"
+    },
+    {
+      "id": "9448",
+      "username": "abhishek",
+      "email": "abhi@gmail.com",
+      "password": "abhi123"
+    },
+    {
+      "id": "0192",
+      "username": "mayank",
+      "email": "mayank@gmail.com",
+      "password": "mayank@1234"
+    },
+    {
+      "id": "5c94",
+      "username": "hardik",
+      "email": "hardik@gmail.com",
+      "password": "hardik123"
     }
   ],
   "Product": [
@@ -19,7 +43,8 @@
         "it is very good product",
         "this is the best product",
         "the product is better than the previous one",
-        "add"
+        "add",
+        "good"
       ]
     },
     {
@@ -37,7 +62,8 @@
         "add",
         "second rev",
         "second rev",
-        "second rev"
+        "second rev",
+        "ritika rev"
       ]
     },
     {
@@ -79,7 +105,8 @@
       "reviews": [
         "it is very good product",
         "this is the best product",
-        "the product is better than the previous one"
+        "the product is better than the previous one",
+        "good"
       ]
     },
     {
@@ -135,7 +162,8 @@
       "reviews": [
         "it is very good product",
         "this is the best product",
-        "the product is better than the previous one"
+        "the product is better than the previous one",
+        "nice"
       ]
     }
   ]

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { HttpService } from 'src/app/service/http/http.service';
 import { Router } from '@angular/router';
+import { idText } from 'typescript';
 
 @Component({
   selector: 'app-signin',
@@ -15,10 +16,20 @@ export class SigninComponent {
     password: new FormControl(''),
   });
 
-  constructor( private httpService: HttpService ) { }
+  constructor(private httpService: HttpService, private router: Router) { }
 
   submit() {
-    console.log(this.form.value);
-    this.httpService.postSignin(this.form);
+    // console.log(!this.form.value.username);
+    if ( this.form.value.username && this.form.value.email && this.form.value.password) {
+
+      this.httpService.postSignin(this.form.value).subscribe({
+        next: (res: any) => {
+          this.router.navigate(['']);
+        },
+        error: (err: any) => {
+          console.log('signin failed..' + err);
+        }
+      });
+    }
   }
 }
