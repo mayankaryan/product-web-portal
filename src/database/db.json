@@ -28,6 +28,12 @@
       "username": "hardik",
       "email": "hardik@gmail.com",
       "password": "hardik123"
+    },
+    {
+      "id": "aff7",
+      "username": "mayank",
+      "email": "mayank@gmail.com",
+      "password": "mayank1234"
     }
   ],
   "Product": [
